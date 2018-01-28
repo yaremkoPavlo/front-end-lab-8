@@ -1,0 +1,16 @@
+$fontcolor: #000000;
+$bgcolbody: #dcbb9a;
+$bgcolcontent: #ffffff;
+$hcolor: #893c00;
+$briefcolor: #fadcba;
+$thcolor: #e0e0e0;
+$tdcolor: $bgcolcontent;
+$formcolor: #808080;
+$display: inline-block;
+$width: 40%;
+@mixin brief-m {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: $width;
+    float: left;
+}

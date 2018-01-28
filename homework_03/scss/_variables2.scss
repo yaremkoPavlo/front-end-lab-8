@@ -1,0 +1,13 @@
+$fontcolor: #ffffff;
+$bgcolbody: #e0f6fd;
+$bgcolcontent: #3b3b3b;
+$hcolor: #fccd10;
+$briefcolor: #fff178;
+$thcolor: #94a34e;
+$tdcolor: #677d01;
+$formcolor: #fccd10;
+$ahrefcolor: $hcolor;
+$width: 970px;
+@mixin brief-m {
+    margin-bottom: 30px;
+}

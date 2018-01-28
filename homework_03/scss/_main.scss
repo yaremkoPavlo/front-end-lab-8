@@ -1,0 +1,110 @@
+
+$ahrefcolor: #0080cc !default;
+$color: #000000 !default;
+
+body {
+    margin: 0;
+    background-color: $bgcolbody;
+    font-family: Times New Roman, Georgia, serif;
+    color: $fontcolor;
+}
+#content {
+    width: 1020px;
+    box-sizing: border-box;
+    background-color: $bgcolcontent;
+    margin: 10px auto;
+    padding: 5px 20px;
+
+    h1 {
+        text-align: center;
+    }
+    h1, h2 {
+        color: $hcolor;
+    }
+
+    img {
+        border: 2px solid $hcolor;
+        padding: 2px;
+        margin-bottom: 20px;
+    }
+    .img-left {
+        float: left;
+        margin-right: 20px;
+    }
+    .img-right {
+        float: right;
+        margin-left: 20px;
+    }
+    a {
+        color: $ahrefcolor;
+    }
+    .brief {
+        color: $color;
+        background-color: $briefcolor;
+        padding: 20px;
+        @include brief-m;
+    }
+
+}
+table {
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    caption {
+        text-align: right;
+        color: $color;
+    }
+    // tr:nth-child(n+2) {
+    //     border-collapse: collapse;
+    // }
+    th {
+        background-color: $thcolor;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: normal;
+        padding: 10px;
+        color: $color;
+        &:nth-child(n+2) {
+            border-left: 2px solid #ffffff;
+        }
+    }
+    td {
+        background-color: $tdcolor;
+        padding: 10px;
+        border-bottom: 1px solid $thcolor
+    }
+
+}
+form {
+    color: $formcolor;
+    div {
+        box-sizing: border-box;
+        p {
+            margin: 5px 0;
+            text-transform: uppercase;
+        }
+        input, textarea {
+            padding: 5px;
+            box-sizing: inherit;
+            width:100%;
+        }
+        &.form2col {
+            width: 49.7%;
+            display: inline-block;
+        }
+    }
+    button {
+        cursor: pointer;
+        display: block;
+        background-color: $bgcolcontent;
+        box-shadow: none;
+        padding: 10px;
+        margin: 20px 0;
+        width: 250px;
+        border: 1px solid $ahrefcolor;
+        color:  $ahrefcolor;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+}
