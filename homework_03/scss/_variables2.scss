@@ -7,7 +7,7 @@ $thcolor: #94a34e;
 $tdcolor: #677d01;
 $formcolor: #fccd10;
 $ahrefcolor: $hcolor;
-$width: 970px;
-@mixin brief-m {
-    margin-bottom: 30px;
-}
+$width: 100%;
+$float: none;
+$mr: inherit;
+$mb: 30px;

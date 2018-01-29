@@ -1,6 +1,12 @@
-
 $ahrefcolor: #0080cc !default;
 $color: #000000 !default;
+@mixin brief-m {
+    box-sizing: border-box;
+    margin-bottom: $mb;
+    margin-right: $mr;
+    width: $width;
+    float: $float;
+}
 
 body {
     margin: 0;

@@ -8,9 +8,6 @@ $tdcolor: $bgcolcontent;
 $formcolor: #808080;
 $display: inline-block;
 $width: 40%;
-@mixin brief-m {
-    margin-bottom: 20px;
-    margin-right: 20px;
-    width: $width;
-    float: left;
-}
+$float: left;
+$mr: 20px;
+$mb: 20px;
