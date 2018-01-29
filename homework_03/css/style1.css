@@ -73,7 +73,7 @@ form {
       display: inline-block; }
   form button {
     cursor: pointer;
-    display: block;
+    display: inline-block;
     background-color: #ffffff;
     box-shadow: none;
     padding: 10px;
@@ -83,5 +83,11 @@ form {
     color: #0080cc;
     text-transform: uppercase;
     font-size: 16px; }
+    form button:hover {
+      background-color: #f2f2f2;
+      color: #1aaaff;
+      border-color: #1aaaff; }
+    form button:active {
+      transform: translateY(2px); }
 
 /*# sourceMappingURL=style1.css.map */
