@@ -1,0 +1,73 @@
+$col0: #fff;
+$color1: rgba(0, 0, 0, 0.4);
+@font-face {
+  font-family: "Open Sans";
+  src: url("http://fonts.googleapis.com/css?family=Open+Sans");
+}
+div.content {
+  margin:auto;
+  max-width: 1600px;
+}
+nav li {
+  display: inline-block;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+header {
+  background-image: url("../img/apples.jpg");
+  background-position: center;
+  height: 740px;
+  color: $col0;
+  // display: flex;
+  // flex-direction: column;
+  // .first-container {
+  //   margin: auto;
+  //   max-width: 1200px;
+  //   min-width: 900px;
+  //   flex: 1 1 auto;
+  //   order: 0;
+  // }
+  // .second-container {
+  //   flex: 10 1 auto;
+  //   order: 0;
+  //   align-self: center;
+  // }
+   .first-container {
+     height: 15%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     div {
+       margin-left: 200px;
+     }
+     nav {
+       margin-right: 170px;
+       li {
+         padding: 15px;
+       }
+     }
+   }
+   .second-container {
+     height: 85%;
+   }
+  button {
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    height: 60px;
+    width: 230px;
+    color: #fff;
+    background-color: $color1;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
