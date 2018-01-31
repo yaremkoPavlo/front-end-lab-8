@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,51 +42,74 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("http://fonts.googleapis.com/css?family=Open+Sans"); }
 div.content {
   margin: auto;
-  max-width: 1600px; }
+  max-width: 1600px;
+  font-family: "Open Sans"; }
 
-nav li {
+#trade {
+  font-size: 30px;
+  vertical-align: super; }
+
+#ampersant {
+  font-size: 170%; }
+
+nav {
   display: inline-block; }
-  nav li a {
+  nav a {
     text-decoration: none;
     color: inherit; }
+    nav a:hover {
+      background-color: rgba(0, 0, 0, 0.4); }
 
 header {
   background-image: url("../img/apples.jpg");
   background-position: center;
   height: 740px;
-  color: #fff; }
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
   header .first-container {
-    height: 15%;
+    flex: 1 1 auto;
+    align-self: stretch;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; }
-    header .first-container div {
-      margin-left: 200px; }
-    header .first-container nav {
-      margin-right: 170px; }
-      header .first-container nav li {
-        padding: 15px; }
+    header .first-container .top-logo-text {
+      text-transform: uppercase; }
+    header .first-container a {
+      padding: 15px; }
+      header .first-container a.selected {
+        border-bottom: 2px solid #B7C8D9; }
   header .second-container {
-    height: 85%; }
-  header button {
-    border: 2px solid #fff;
-    box-sizing: border-box;
-    height: 60px;
-    width: 230px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.4);
-    font-size: 16px;
-    text-transform: capitalize;
-    cursor: pointer; }
-    header button:hover {
-      background-color: rgba(0, 0, 0, 0.6); }
-    header button:active {
-      transform: translateY(2px); }
+    flex: 5 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    header .second-container .logo-text h1 {
+      text-transform: uppercase;
+      font-size: 48px;
+      letter-spacing: 5px; }
+  header .three-container {
+    flex: 1 1 auto; }
+    header .three-container button {
+      border: 2px solid #fff;
+      box-sizing: border-box;
+      height: 60px;
+      width: 230px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.4);
+      font-family: "Open Sans";
+      font-size: 16px;
+      text-transform: capitalize;
+      cursor: pointer; }
+      header .three-container button:hover {
+        background-color: rgba(0, 0, 0, 0.6); }
+      header .three-container button:active {
+        transform: translateY(2px); }
 
 /*# sourceMappingURL=style.css.map */
