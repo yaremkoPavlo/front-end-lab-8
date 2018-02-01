@@ -21,6 +21,18 @@ nav {
     nav a:hover {
       background-color: rgba(0, 0, 0, 0.4); }
 
+.email-subscrible input {
+  background-color: #E8E8E8;
+  border: 1px solid #000;
+  border-right: none;
+  padding: 20px; }
+.email-subscrible button {
+  background-color: #343638;
+  border: 1px solid #000;
+  border-left: none;
+  padding: 20px;
+  color: #fff; }
+
 header {
   background-image: url("../img/apples.jpg");
   background-position: center;
@@ -31,7 +43,7 @@ header {
   justify-content: space-around;
   align-items: center; }
   header .first-container {
-    margin: 0 13.5vw;
+    margin: 0 12vw;
     flex: 2 1 auto;
     align-self: stretch;
     display: flex;
@@ -79,7 +91,7 @@ header {
         transform: translateY(2px); }
 
 .latina {
-  margin: 0 13.5vw;
+  margin: 0 12vw;
   min-height: 360px;
   display: flex;
   flex-direction: row;
@@ -107,7 +119,7 @@ section.grey-area {
     section.grey-area .area-header h3 {
       font: inherit; }
   section.grey-area .grid-container {
-    margin: 0 13.5vw;
+    margin: 0 12vw;
     color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -157,27 +169,37 @@ section.grey-area {
       position: relative; }
   section.grey-area .area-footer {
     height: 200px;
-    margin: 90px 13.5vw 0 13.5vw;
+    margin: 90px 12vw 0 12vw;
     background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center; }
     section.grey-area .area-footer p {
-      margin-right: auto;
-      margin-left: auto; }
+      flex: 3;
+      text-align: center;
+      font-size: 24px; }
     section.grey-area .area-footer div {
-      margin-right: auto; }
+      flex: 4; }
+      section.grey-area .area-footer div input {
+        width: 22vw; }
 
 section.columns {
-  margin: 0 13.5vw;
+  margin: 0 12vw;
   min-height: 440px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 220px;
   grid-template-rows: 1fr;
-  grid-column-gap: 4vw; }
+  grid-column-gap: 2vw; }
   section.columns .column-item {
     margin-top: 120px; }
+    section.columns .column-item .tweet-text {
+      font-style: italic; }
+    section.columns .column-item input {
+      width: 120px;
+      box-sizing: border-box; }
+    section.columns .column-item button {
+      width: 99px; }
     section.columns .column-item p {
       font-size: 14px;
       color: #A4A4A4;
@@ -185,8 +207,7 @@ section.columns {
 
 footer {
   height: 80px;
-  max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 12vw;
   font-size: 14px;
   display: flex;
   flex-direction: row;
