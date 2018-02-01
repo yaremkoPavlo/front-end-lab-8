@@ -31,11 +31,6 @@ nav {
     }
   }
 }
-hr {
-  width: $main-width;
-  margin: 0 auto;
-}
-
 header {
   background-image: url("../img/apples.jpg");
   background-position: center;
@@ -47,9 +42,7 @@ header {
   align-items: center;
 
   .first-container {
-    max-width: $main-width;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 13.5vw;
     flex: 2 1 auto;
     align-self: stretch;
     display: flex;
@@ -60,7 +53,6 @@ header {
     .top-logo-text {
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-left: 10px;
     }
     a {
       margin: 0 15px;
@@ -69,6 +61,7 @@ header {
        border-bottom: 2px solid #B7C8D9;
       }
     }
+
   }
   .second-container {
     flex: 11 1 auto;
@@ -108,33 +101,29 @@ header {
   }
 }
 .latina {
-  max-width: 1240px;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 13.5vw;
   min-height: 360px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   .latina-big {
-    flex: 2;
+    flex: 1;
     font-size: 24px;
-    padding: 35px;
     line-height: 42px;
 
   }
   .latina-small {
-    flex: 2;
+    flex: 1;
     font-size: 14px;
-    padding: 35px;
-
+    margin-left: 3vw;
   }
 }
 section.grey-area {
   background-color: #F3F3F3;
   min-height: 1360px;
   .area-header {
-    margin:auto;
+    margin: auto;
     width: 500px;
     padding-top: 150px;
     padding-bottom: 90px;
@@ -145,14 +134,12 @@ section.grey-area {
     }
   }
   .grid-container {
-    max-width: $main-width;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 13.5vw;
     color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 300px 300px;
-    grid-gap: 30px;
+    grid-gap: 2vw;
     & > div {
       border: 2px solid #fff;
     }
@@ -177,7 +164,7 @@ section.grey-area {
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7));
       width: 100%;
       span {
-        padding-left: 30px;
+        padding-left: 2vw;
       }
     }
     .art-france {
@@ -207,21 +194,30 @@ section.grey-area {
   }
   .area-footer {
     height: 200px;
-    max-width: $main-width;
-    width: 100%;
-    margin: 0 auto;
-
+    margin: 90px 13.5vw 0 13.5vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    p {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    div {
+      margin-right: auto;
+    }
   }
 }
 section.columns {
-  max-width: $main-width;
-  width: 100%;
-  margin: 0 auto;
-  height: 440px;
+  //max-width: $main-width;
+  //width: 100%;
+  margin: 0 13.5vw;
+  min-height: 440px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-gap: 100px;
+  grid-column-gap: 4vw;
   .column-item {
     margin-top: 120px;
     p {

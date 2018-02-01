@@ -21,10 +21,6 @@ nav {
     nav a:hover {
       background-color: rgba(0, 0, 0, 0.4); }
 
-hr {
-  width: 1170px;
-  margin: 0 auto; }
-
 header {
   background-image: url("../img/apples.jpg");
   background-position: center;
@@ -35,9 +31,7 @@ header {
   justify-content: space-around;
   align-items: center; }
   header .first-container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 13.5vw;
     flex: 2 1 auto;
     align-self: stretch;
     display: flex;
@@ -47,8 +41,7 @@ header {
     font-size: 15px; }
     header .first-container .top-logo-text {
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-left: 10px; }
+      letter-spacing: 2px; }
     header .first-container a {
       margin: 0 15px;
       padding: 15px; }
@@ -86,23 +79,20 @@ header {
         transform: translateY(2px); }
 
 .latina {
-  max-width: 1240px;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 13.5vw;
   min-height: 360px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; }
   .latina .latina-big {
-    flex: 2;
+    flex: 1;
     font-size: 24px;
-    padding: 35px;
     line-height: 42px; }
   .latina .latina-small {
-    flex: 2;
+    flex: 1;
     font-size: 14px;
-    padding: 35px; }
+    margin-left: 3vw; }
 
 section.grey-area {
   background-color: #F3F3F3;
@@ -117,14 +107,12 @@ section.grey-area {
     section.grey-area .area-header h3 {
       font: inherit; }
   section.grey-area .grid-container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 13.5vw;
     color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 300px 300px;
-    grid-gap: 30px; }
+    grid-gap: 2vw; }
     section.grey-area .grid-container > div {
       border: 2px solid #fff; }
     section.grey-area .grid-container .likes {
@@ -146,7 +134,7 @@ section.grey-area {
       background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
       width: 100%; }
       section.grey-area .grid-container .img-title span {
-        padding-left: 30px; }
+        padding-left: 2vw; }
     section.grey-area .grid-container .art-france {
       background-image: url("../img/sample.jpg");
       grid-column: 1/3;
@@ -169,19 +157,25 @@ section.grey-area {
       position: relative; }
   section.grey-area .area-footer {
     height: 200px;
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto; }
+    margin: 90px 13.5vw 0 13.5vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    section.grey-area .area-footer p {
+      margin-right: auto;
+      margin-left: auto; }
+    section.grey-area .area-footer div {
+      margin-right: auto; }
 
 section.columns {
-  max-width: 1170px;
-  width: 100%;
-  margin: 0 auto;
-  height: 440px;
+  margin: 0 13.5vw;
+  min-height: 440px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-gap: 100px; }
+  grid-column-gap: 4vw; }
   section.columns .column-item {
     margin-top: 120px; }
     section.columns .column-item p {
