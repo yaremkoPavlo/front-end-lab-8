@@ -33,8 +33,6 @@ header ul {
       text-transform: uppercase;
       display: block;
       font-weight: 700; }
-      header ul li a:hover {
-        color: #39c2d7; }
 
 section.banner {
   background-image: url(../img/banner.jpg);
@@ -49,6 +47,20 @@ section.banner {
     background-color: #39c2d7;
     padding: 10px 8px;
     margin: 20px 5%; }
+
+section.articles {
+  padding: 0 15px; }
+  section.articles h2 {
+    display: none; }
+  section.articles a {
+    text-decoration: none;
+    background-color: #ccc; }
+  section.articles article.news {
+    padding: 10px;
+    margin: 15px auto; }
+    section.articles article.news h4, section.articles article.news p {
+      text-align: center;
+      margin: 10px 0; }
 
 footer {
   background-color: #39c2d7; }
@@ -65,8 +77,6 @@ footer {
       text-align: center;
       font-weight: 700;
       font-size: 14px; }
-    footer div.footer-div a:hover {
-      text-decoration: none; }
 
 @media screen and (min-width: 575px) {
   header {
@@ -83,6 +93,8 @@ footer {
         display: inline-block; }
         header ul.navigation li a {
           padding: 10px; }
+          header ul.navigation li a:hover {
+            color: #39c2d7; }
 
   section.banner {
     min-height: 530px; }
@@ -94,11 +106,24 @@ footer {
         text-align: center;
         font-size: 24px; }
 
+  section.articles {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px; }
+    section.articles a:hover {
+      background-color: #39c2d7; }
+    section.articles article.news {
+      margin: 0; }
+
   footer div.footer-div ul {
     flex-direction: row;
     justify-content: center; }
     footer div.footer-div ul li {
-      margin: 0 10px; } }
+      margin: 0 10px; }
+      footer div.footer-div ul li a:hover {
+        text-decoration: none; } }
 @media screen and (min-width: 900px) {
   header {
     display: flex;
@@ -119,8 +144,15 @@ footer {
         width: 40%;
         align-self: center;
         margin: 0;
+        padding-left: 0;
         font-size: 32px;
         text-align: left; }
+
+  section.articles {
+    max-width: 860px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
 
   footer div.footer-div {
     max-width: 860px;
@@ -129,7 +161,7 @@ footer {
     padding-right: 0;
     display: flex;
     align-items: center; }
-    footer div.footer-div ul li:first-child {
+    footer div.footer-div ul li:first-of-type {
       margin-left: 0; }
     footer div.footer-div div p {
       padding-left: 10px; } }
