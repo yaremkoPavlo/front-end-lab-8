@@ -1,0 +1,117 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  color: #333; }
+
+body {
+  margin: 0; }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; }
+
+p {
+  font-size: 14px; }
+
+header div.logo img {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 40px; }
+header ul {
+  margin: 0;
+  padding-left: 0;
+  background-color: #ccc; }
+  header ul li {
+    border-top: 1px solid #464547; }
+    header ul li:last-of-type {
+      border-bottom: 1px solid #464547; }
+    header ul li a {
+      padding: 10px 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      font-weight: 700; }
+      header ul li a:hover {
+        color: #39c2d7; }
+
+section.banner {
+  background-image: url(../img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 245px;
+  display: flex;
+  align-items: flex-end; }
+  section.banner div h3 {
+    color: #fff;
+    background-color: #39c2d7;
+    padding: 10px 8px;
+    margin: 20px 5%; }
+
+footer {
+  background-color: #39c2d7; }
+  footer div.footer-div {
+    padding: 10px; }
+    footer div.footer-div ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    footer div.footer-div a, footer div.footer-div p {
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px; }
+
+@media screen and (min-width: 575px) {
+  header {
+    margin-top: 30px; }
+    header div.logo img {
+      height: auto; }
+    header nav {
+      width: 420px;
+      margin: 12px auto; }
+    header ul.navigation {
+      background-color: inherit; }
+      header ul.navigation li {
+        border: none;
+        display: inline-block; }
+        header ul.navigation li a {
+          padding: 10px; }
+
+  section.banner {
+    min-height: 530px; }
+    section.banner div {
+      align-self: flex-start;
+      margin: 30px 18%; }
+      section.banner div h3 {
+        background-color: inherit;
+        text-align: center;
+        font-size: 24px; } }
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    align-items: center;
+    max-width: 860px;
+    margin: 12px auto 15px auto; }
+    header div.logo img {
+      margin-bottom: 0; }
+    header nav {
+      margin: 0 0 0 40px; }
+
+  section.banner {
+    min-height: 375px; }
+    section.banner div {
+      max-width: 860px;
+      margin: auto; }
+      section.banner div h3 {
+        width: 40%;
+        align-self: center;
+        margin: 0;
+        font-size: 32px;
+        text-align: left; } }
+
+/*# sourceMappingURL=master.css.map */

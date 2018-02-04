@@ -1,0 +1,149 @@
+$col1: #333; //black
+$col2: #464547; //dark grey
+$col3: #39c2d7; //blue
+$col4: #ccc;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  color: $col1;
+}
+body {
+  margin: 0;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+p {
+  font-size: 14px;
+}
+header {
+  div.logo img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 40px;
+  }
+  ul {
+    margin: 0;
+    padding-left: 0;
+    background-color: $col4;
+    li {
+      border-top: 1px solid $col2;
+      &:last-of-type {
+        border-bottom:  1px solid $col2;
+      }
+      a {
+        padding: 10px 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 700;
+        &:hover {
+          color: $col3;
+        }
+      }
+    }
+  }
+}
+section.banner {
+  background-image: url(../img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 245px;
+  display: flex;
+  align-items: flex-end;
+  div h3 {
+    color: #fff;
+    background-color: $col3;
+    padding: 10px 8px;
+    margin: 20px 5%;
+  }
+}
+section.articles {
+
+}
+footer {
+  background-color: $col3;
+  div.footer-div {
+    padding: 10px;
+    ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    a, p {
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (min-width: 575px)  {
+header {
+  margin-top: 30px;
+  div.logo img {
+    height: auto;
+  }
+  nav {
+    width: 420px;
+    margin: 12px auto;
+  }
+  ul.navigation {
+    background-color: inherit;
+    li {
+      border: none;
+      display: inline-block;
+      a {
+        padding: 10px;
+      }
+    }
+  }
+}
+section.banner {
+  min-height: 530px;
+  div {
+    align-self: flex-start;
+    margin: 30px 18%;
+    h3 {
+      background-color: inherit;
+      text-align: center;
+      font-size: 24px;
+    };
+  };
+}
+}
+@media screen and (min-width: 900px) {
+header {
+  display: flex;
+  align-items: center;
+  max-width: 860px;
+  margin: 12px auto 15px auto;
+  div.logo img {
+    margin-bottom: 0;
+  }
+  nav {
+    margin: 0 0 0 40px;
+  }
+}
+section.banner {
+  min-height: 375px;
+  div {
+    max-width: 860px;
+    margin: auto;
+    h3 {
+      width: 40%;
+      align-self: center;
+      margin: 0;
+      font-size: 32px;
+      text-align: left;
+    }
+  }
+}
+}
