@@ -56,6 +56,7 @@ section.articles {
     text-decoration: none;
     background-color: #ccc; }
   section.articles article.news {
+    background-color: #ccc;
     padding: 10px;
     margin: 15px auto; }
     section.articles article.news h4, section.articles article.news p {
