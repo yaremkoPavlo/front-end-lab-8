@@ -12,7 +12,7 @@ if (c >= a + b || a >= b + c || b >= a + c) {
 if (a > 0 && b > 0 && c > 0 && bool) {
     let p = (a + b + c) / 2;
     let square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    square = (Number.isInteger(square))?square:square.toFixed(2);
+    square = Number.isInteger(square) ? square : square.toFixed(2);
     let pifagor = a*a == b*b + c*c || a*a + b*b == c*c || b*b == c*c + a*a;
 
     if (pifagor) {
