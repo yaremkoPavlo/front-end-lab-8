@@ -1,8 +1,8 @@
 let bool = true,
     typeTr = '';
-let a = Number(prompt("Input 1-st length of triangle side"));
-let b = Number(prompt("Input 2-nd length of triangle side"));
-let c = Number(prompt("Input 3-th length of triangle side"));
+let a = parseFloat(prompt("Input 1-st length of triangle side"));
+let b = parseFloat(prompt("Input 2-nd length of triangle side"));
+let c = parseFloat(prompt("Input 3-th length of triangle side"));
 
 if (c >= a + b || a >= b + c || b >= a + c) {
     typeTr = "It can`t be a triangle";
@@ -12,7 +12,7 @@ if (c >= a + b || a >= b + c || b >= a + c) {
 if (a > 0 && b > 0 && c > 0 && bool) {
     let p = (a + b + c) / 2;
     let square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    square = Number.isInteger(square) ? square : square.toFixed(2);
+    square = parseFloat(square.toFixed(2));
     let pifagor = a*a == b*b + c*c || a*a + b*b == c*c || b*b == c*c + a*a;
 
     if (pifagor) {
