@@ -1,12 +1,8 @@
-let n = Number(prompt("Enter a natural number between 0 and 20"));
+let a = Number(prompt("Enter a natural number between 0 and 20"));
 
-if (n == 0 || n > 20) {
+if (a == 0 || a > 20) {
     console.error("Incorrect!");
 } else {
-    console.log(makePiramid(n));
-}
-
-function makePiramid(a) {
     let message = "",
         s1 = "[~]",
         s2 = "   ",
@@ -23,5 +19,5 @@ function makePiramid(a) {
         message += s3;
         spases--;
     }
-    return message;
+    console.log(message);
 }
