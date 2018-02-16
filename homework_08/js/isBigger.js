@@ -1,1 +1,1 @@
-let isBigger = (a, b) => {return a > b};
+let isBigger = (a, b) => a > b;
