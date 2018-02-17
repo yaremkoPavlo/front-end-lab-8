@@ -1,9 +1,7 @@
 function decypherPhrase(obj, str) {
+	let reversObj = {};
 	for (let key in obj) {
-		let rkey = key,
-			rval = obj[key];
-		key = rval;
-		obj[key] = rkey;
+		reversObj[obj[key]] = key;
 	}
-	return cypherPhrase(obj, str);
+	return cypherPhrase(reversObj, str);
 }
