@@ -2,7 +2,13 @@
  * Your debounce function goes here
  * function(){}
  */
-
+function debounce (callback, delay) {
+  var timerId;
+  return () => {
+    clearTimeout(timerId);
+    timerId = setTimeout(callback, delay);
+  }
+}
 // Example
 
 let iterator = 0;
