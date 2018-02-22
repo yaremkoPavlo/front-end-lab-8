@@ -43,9 +43,20 @@ function fighter (obj) {
       hp = obj.hp,
       combatStats = {wins: wins, loses: loses},
       block = () => Boolean(Math.round(Math.random())),
-      getStats = () => ({name:name, attack: attack, hp: hp}),
-      getFighterName = function() {return this.name},
-      getCombatHistory = function() {return this.combatStats};
+      getStats = function() {return {name: this.name, attack: this.attack, hp: this.hp}},
+      getName = function() {return this.name},
+      getCombatHistory = function() {return this.combatStats},
+      fight = function(oponent) {
+        if (oponent.hp <= 0 || oponent.block()) {
+          return false;
+        }
+        oponent.hp -= this.attack;
+        if (oponent.hp <= 0) {
+          oponent.combatStats.loses += 1;
+          this.combatStats.wins += 1;
+        }
+        return true;
+      }
   return ({
     name: name,
     attack: attack,
@@ -53,37 +64,38 @@ function fighter (obj) {
     combatStats: combatStats,
     block: block,
     getStats: getStats,
-    getFighterName: getFighterName,
-    getCombatHistory: getCombatHistory
+    getName: getName,
+    getCombatHistory: getCombatHistory,
+    fight: fight
   })
 }
 /**
  * The following code must be valid after implementation!
  */
 
-// var fighter1 = fighter({name: 'John', attack: 100, hp: 100});
-// var fighter2 = fighter({name: 'Kayn', attack: 50, hp: 300});
-// var fighter3 = fighter({name: 'Bill', attack: 40, hp: 100});
+var fighter1 = fighter({name: 'John', attack: 100, hp: 100});
+var fighter2 = fighter({name: 'Kayn', attack: 50, hp: 300});
+var fighter3 = fighter({name: 'Bill', attack: 40, hp: 100});
 
-// fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
-// fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
+fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
+fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
 
-// /**
-//  * Fighter John
-//  * - Combat stats: { wins: 1, loses: 0 }
-//  * - Properties: { name: 'John', attack: 100, hp: 100 }
-//  */
-// showResult(fighter1);
+/**
+ * Fighter John
+ * - Combat stats: { wins: 1, loses: 0 }
+ * - Properties: { name: 'John', attack: 100, hp: 100 }
+ */
+showResult(fighter1);
 
-// /** Fighter Kayn
-//  * - Combat stats: { wins: 0, loses: 0 }
-//  * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
-//  */
-// showResult(fighter2);
+/** Fighter Kayn
+ * - Combat stats: { wins: 0, loses: 0 }
+ * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
+ */
+showResult(fighter2);
 
-// /**
-//  * Fighter Bill
-//  * - Combat stats: { wins: 0, loses: 1 }
-//  * - Properties: { name: 'Bill', attack: 40, hp: 0 }
-//  */
-// showResult(fighter3);
+/**
+ * Fighter Bill
+ * - Combat stats: { wins: 0, loses: 1 }
+ * - Properties: { name: 'Bill', attack: 40, hp: 0 }
+ */
+showResult(fighter3);
