@@ -37,13 +37,25 @@ function showResult(fighter) {
  */
 function fighter (obj) {
   let wins = 0,
-      loses = 0;
-  return {
-    getStats: () => obj,
-    getFighterName: () => obj.name,
-    block: () => Boolean(Math.round(Math.random())),
-    combatStats: {wins: wins, loses: loses}
-  }
+      loses = 0,
+      name = obj.name,
+      attack = obj.attack,
+      hp = obj.hp,
+      combatStats = {wins: wins, loses: loses},
+      block = () => Boolean(Math.round(Math.random())),
+      getStats = () => ({name:name, attack: attack, hp: hp}),
+      getFighterName = function() {return this.name},
+      getCombatHistory = function() {return this.combatStats};
+  return ({
+    name: name,
+    attack: attack,
+    hp: hp,
+    combatStats: combatStats,
+    block: block,
+    getStats: getStats,
+    getFighterName: getFighterName,
+    getCombatHistory: getCombatHistory
+  })
 }
 /**
  * The following code must be valid after implementation!
