@@ -35,10 +35,19 @@ function showResult(fighter) {
  * Your code goes here
  * function foo() { ... }
  */
-
+function fighter (obj) {
+  let wins = 0,
+      loses = 0;
+  return {
+    getStats: () => obj,
+    getFighterName: () => obj.name,
+    block: () => Boolean(Math.round(Math.random())),
+    combatStats: {wins: wins, loses: loses}
+  }
+}
 /**
  * The following code must be valid after implementation!
- */ 
+ */
 
 // var fighter1 = fighter({name: 'John', attack: 100, hp: 100});
 // var fighter2 = fighter({name: 'Kayn', attack: 50, hp: 300});
@@ -58,7 +67,7 @@ function showResult(fighter) {
 //  * - Combat stats: { wins: 0, loses: 0 }
 //  * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
 //  */
-// showResult(fighter2); 
+// showResult(fighter2);
 
 // /**
 //  * Fighter Bill
