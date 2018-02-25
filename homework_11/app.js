@@ -10,16 +10,14 @@ function renderFolder (folder) {
 	li.appendChild(text);
 	ul.appendChild(li);
 
-	if (folder["children"] === null || folder["children"] === false) {
-		liEmp.appendChild(empty);
-		li.appendChild(liEmp);
-		ul.appendChild(li);
-	}
-
 	if (folder["children"]) {
 		for (let i = 0; i < folder["children"].length; i++) {
 			li.appendChild(renderFolder(folder["children"][i]))
 		}
+	} else if (folder["children"] === null || folder["children"] === false) {
+		liEmp.appendChild(empty);
+		li.appendChild(liEmp);
+		ul.appendChild(li);
 	}
 
 	if (folder["folder"]) {
@@ -30,6 +28,14 @@ function renderFolder (folder) {
 	return ul;
 }
 
+function renderTree(data) {
+	let ul = document.createElement("ul"),
+			li = document.createElement("li");
+	for (let i = 0; i < data.length; i++) {
+		li.appendChild(renderFolder(data[i]));
+	}
+	ul.appendChild(li);
+	return ul;
+}
 
-
-rootNode.appendChild(renderFolder(structure[0]));
+rootNode.appendChild(renderTree(structure));
