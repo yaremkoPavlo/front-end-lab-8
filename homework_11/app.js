@@ -13,8 +13,10 @@ function renderFolder (folder) {
 			li.appendChild(renderFolder(folder["children"][i]))
 		}
 	}
-	if (folder["folder"] === false) {
-		ul.className("nofolder");
+	if (folder["folder"]) {
+		li.className = "folder";
+	} else {
+		li.className = "file";
 	}
 	return ul;
 }
