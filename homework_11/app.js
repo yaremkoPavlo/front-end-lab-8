@@ -23,7 +23,7 @@ function renderFolder (folder) {
 		li.className = "folder"
 		li.onclick = showContent;
 		ul.className = "parent";
-	} else {
+	} else if (folder["title"] !== "Folder is empty") {
 		li.insertBefore(iconFile, li.childNodes[0]);
 		li.className = "file";
 	}
