@@ -4,17 +4,27 @@ var rootNode = document.getElementById("root");
 function renderFolder (folder) {
 	let ul = document.createElement("ul"),
 			li = document.createElement("li"),
-			text = document.createTextNode(folder["title"]);
+			text = document.createTextNode(folder["title"]),
+			iconFolder = document.createElement("i"),
+			iconFile = document.createElement("i"),
+			empty = document.createTextNode("folder is empty");
+
+	iconFolder.className = "material-icons";;
+	iconFolder.innerHTML = "folder";
+	iconFile.className = "material-icons";
+	iconFile.innerHTML = "insert_drive_file";
 
 	li.appendChild(text);
 	ul.appendChild(li);
 	ul.style.display = "none";
 
 	if (folder["folder"]) {
+		li.insertBefore(iconFolder, li.childNodes[0]);
 		li.className = "folder"
 		li.onclick = showContent;
 		ul.className = "parent";
 	} else {
+		li.insertBefore(iconFile, li.childNodes[0]);
 		li.className = "file";
 	}
 
@@ -53,8 +63,10 @@ function showContent(event) {
 
 	for (let i = 1; i < childTarget.length; i++) {
 		if (childTarget[i].style.display === "none") {
+			target.childNodes[0].innerHTML = "folder_open";
 			childTarget[i].style.display = "block";
 		} else {
+			target.childNodes[0].innerHTML = "folder";
 			childTarget[i].style.display = "none";
 		}
 	}
