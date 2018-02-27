@@ -1,2 +1,5 @@
 /* Your styles goes here */
-
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
