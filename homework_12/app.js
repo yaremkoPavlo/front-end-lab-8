@@ -13,15 +13,13 @@ window.addEventListener('hashchange', function(e) {
   }
 });
 
+//first opening render
 if (!location.hash) {
   rootNode.appendChild(madeThumbnails(tanks));
-  console.log(`${location.hash} is empty`);
 } else {
   let a = searchFirstTank(tanks, location.hash);
   rootNode.appendChild(madeDetails(tanks[a]));
-  console.log(`${location.hash} ${a}`);
 }
-
 
 function madeThumbnails(arr) {
   let div = document.createElement('div'),
@@ -65,19 +63,40 @@ function madeDetails(tank) {
       h1 = document.createElement('h1'),
       imgC = document.createElement('img'),
       imgT = document.createElement('img'),
-      back = document.createElement('div');
+      back = document.createElement('div'),
+      rDiv = document.createElement('div'),
+      lDiv = document.createElement('div'),
+      h4Pr = document.createElement('h4'),
+      h4Dt = document.createElement('h4');
 
   imgC.src = tank.country_image;
   imgT.src = tank.preview;
 
+  //head of div
   div.className = 'tank-details';
   h1.appendChild(imgC);
   h1.appendChild(document.createTextNode(tank.model));
   div.appendChild(h1);
+
+  //left side of div
+  lDiv.className = 'left';
+  h4Pr.appendChild(document.createTextNode('Preview'))
+  lDiv.appendChild(h4Pr);
+  lDiv.appendChild(imgT);
+  div.appendChild(lDiv);
+
+  //right side of div
+  rDiv.className = 'right';
+  h4Dt.appendChild(document.createTextNode('Characteristic'));
+  rDiv.appendChild(h4Dt);
+  rDiv.appendChild(makeTable(tank.details));
+  div.appendChild(rDiv);
+
   back.innerHTML = "Back to list view";
   back.addEventListener("click", (e) => {
     location.hash = '';
   });
+  back.className = 'back';
   div.appendChild(back);
 
   return div;
@@ -88,4 +107,19 @@ function searchFirstTank (arr, search) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].model === reg.substring(1)) return i;
   }
+}
+
+function makeTable(tablParam) {
+  table = document.createElement('table');
+  for (let key in tablParam) {
+    let tr = document.createElement('tr'),
+        th1 = document.createElement('th'),
+        th2 = document.createElement('th');
+        th1.appendChild(document.createTextNode(key));
+        th2.appendChild(document.createTextNode(tablParam[key]));
+        tr.appendChild(th1);
+        tr.appendChild(th2);
+        table.appendChild(tr);
+  }
+  return table;
 }

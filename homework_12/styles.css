@@ -28,3 +28,13 @@ div.tank h4 {
 div.tank h4 span {
   margin: 0 5px;
 }
+div.tank-details div.left {
+  float: left;
+}
+div.tank-details div.right {
+  float: left;
+}
+div.tank-details div.back {
+  cursor: pointer;
+  clear: both;
+}
