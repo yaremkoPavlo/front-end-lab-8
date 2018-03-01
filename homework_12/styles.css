@@ -30,9 +30,22 @@ div.tank h4 span {
 }
 div.tank-details div.left {
   float: left;
+  width: 600px;
 }
-div.tank-details div.right {
-  float: left;
+div.tank-details div.left h4 {
+  margin-top: 0;
+}
+ div.tank-details div.right {
+  margin-left: 600px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th {
+  border: 1px solid #a19e89;
+  padding: 5px;
+  text-align: left;
 }
 div.tank-details div.back {
   cursor: pointer;
