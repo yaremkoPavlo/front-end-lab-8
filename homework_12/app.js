@@ -2,7 +2,15 @@
 var rootNode = document.getElementById("root");
 
 window.addEventListener('hashchange', function(e) {
-  //console.log(e.oldURL + ' -> ' + e.newURL);
+  let child = rootNode.childNodes[0];
+  if (!location.hash) {
+    rootNode.removeChild(child);
+    rootNode.appendChild(madeThumbnails(tanks));
+  } else {
+    rootNode.removeChild(child);
+    let a = searchFirstTank(tanks, location.hash);
+    rootNode.appendChild(madeDetails(tanks[a]));
+  }
 });
 
 if (!location.hash) {
@@ -52,11 +60,25 @@ function madeThumbnails(arr) {
   return div;
 }
 
-function madeDetails(obj) {
+function madeDetails(tank) {
   let div = document.createElement('div'),
-      h1 = document.createElement('h1');
+      h1 = document.createElement('h1'),
+      imgC = document.createElement('img'),
+      imgT = document.createElement('img'),
+      back = document.createElement('div');
+
+  imgC.src = tank.country_image;
+  imgT.src = tank.preview;
 
   div.className = 'tank-details';
+  h1.appendChild(imgC);
+  h1.appendChild(document.createTextNode(tank.model));
+  div.appendChild(h1);
+  back.innerHTML = "Back to list view";
+  back.addEventListener("click", (e) => {
+    location.hash = '';
+  });
+  div.appendChild(back);
 
   return div;
 }
