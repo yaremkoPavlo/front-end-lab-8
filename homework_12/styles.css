@@ -24,9 +24,18 @@ div.tank img {
 div.tank h4 {
   text-align: center;
   font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 div.tank h4 span {
   margin: 0 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+div.tank-details h1 span:nth-of-type(1) {
+  margin: 0 10px;
+  text-transform: uppercase;
 }
 div.tank-details div.left {
   float: left;

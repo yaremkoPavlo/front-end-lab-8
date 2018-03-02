@@ -61,6 +61,8 @@ function madeThumbnails(arr) {
 function madeDetails(tank) {
   let div = document.createElement('div'),
       h1 = document.createElement('h1'),
+      span = document.createElement('span'),
+      span2 = document.createElement('span'),
       imgC = document.createElement('img'),
       imgT = document.createElement('img'),
       back = document.createElement('div'),
@@ -75,7 +77,10 @@ function madeDetails(tank) {
   //head of div
   div.className = 'tank-details';
   h1.appendChild(imgC);
-  h1.appendChild(document.createTextNode(tank.model));
+  span.appendChild(document.createTextNode(tank.model));
+  span2.appendChild(document.createTextNode("(level "+tank.level+")"));
+  h1.appendChild(span);
+  h1.appendChild(span2);
   div.appendChild(h1);
 
   //left side of div
@@ -115,7 +120,8 @@ function makeTable(tablParam) {
     let tr = document.createElement('tr'),
         th1 = document.createElement('th'),
         th2 = document.createElement('th');
-        th1.appendChild(document.createTextNode(key));
+
+        th1.appendChild(document.createTextNode(key.replace( /_/g, " " )));
         th2.appendChild(document.createTextNode(tablParam[key]));
         tr.appendChild(th1);
         tr.appendChild(th2);
